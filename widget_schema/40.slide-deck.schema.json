@@ -1,0 +1,135 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "$schema": {
+            "type": "string"
+        },
+        "label": {
+            "type": "string"
+        },
+        "isOuterHeaderHidden": {
+            "type": "boolean"
+        },
+        "layoutStyleConfig": {
+            "type": "object",
+            "properties": {
+                "container": {
+                    "type": "object",
+                    "properties": {
+                        "padding": {
+                            "type": "integer"
+                        },
+                        "marginTop": {
+                            "type": "string"
+                        },
+                        "height": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "height",
+                        "marginTop",
+                        "padding"
+                    ],
+                    "additionalProperties": false
+                },
+                "card": {
+                    "type": "object",
+                    "properties": {
+                        "position": {
+                            "type": "string"
+                        },
+                        "top": {
+                            "type": "string"
+                        },
+                        "left": {
+                            "type": "string"
+                        },
+                        "width": {
+                            "type": "string"
+                        },
+                        "height": {
+                            "type": "string"
+                        },
+                        "margin": {
+                            "type": "integer"
+                        },
+                        "padding": {
+                            "type": "integer"
+                        },
+                        "maxWidth": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "height",
+                        "left",
+                        "margin",
+                        "maxWidth",
+                        "padding",
+                        "position",
+                        "top",
+                        "width"
+                    ],
+                    "additionalProperties": false
+                },
+                "cardContent": {
+                    "type": "object",
+                    "properties": {
+                        "padding": {
+                            "type": "integer"
+                        },
+                        "margin": {
+                            "type": "integer"
+                        }
+                    },
+                    "required": [
+                        "margin",
+                        "padding"
+                    ],
+                    "additionalProperties": false
+                },
+                "widgetContainer": {
+                    "type": "object",
+                    "properties": {
+                        "top": {
+                            "type": "string"
+                        },
+                        "left": {
+                            "type": "string"
+                        },
+                        "height": {
+                            "type": "string"
+                        },
+                        "width": {
+                            "type": "string"
+                        },
+                        "background": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "background",
+                        "height",
+                        "left",
+                        "top",
+                        "width"
+                    ],
+                    "additionalProperties": false
+                }
+            },
+            "required": [
+                "card",
+                "cardContent",
+                "container",
+                "widgetContainer"
+            ],
+            "additionalProperties": false
+        },
+        "hasSaveAndExitInPreview": {
+            "type": "boolean"
+        }
+    },
+    "additionalProperties": false
+}

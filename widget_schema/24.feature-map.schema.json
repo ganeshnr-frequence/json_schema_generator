@@ -1,0 +1,113 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "$schema": {
+            "type": "string"
+        },
+        "label": {
+            "type": "string"
+        },
+        "collation": {
+            "type": "object",
+            "properties": {
+                "enabled": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "enabled"
+            ],
+            "additionalProperties": false
+        },
+        "showCardLabel": {
+            "type": "boolean"
+        },
+        "radiusOptions": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "text": {
+                        "type": "string"
+                    },
+                    "value": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "text",
+                    "value"
+                ],
+                "additionalProperties": false
+            }
+        },
+        "defaultRadiusType": {
+            "type": "string"
+        },
+        "conversionLabel": {
+            "type": "string"
+        },
+        "defaultRadius": {
+            "type": "integer"
+        },
+        "minimumRadius": {
+            "type": "integer"
+        },
+        "conversionType": {
+            "type": "string"
+        },
+        "hasOfflineVisits": {
+            "type": "boolean"
+        },
+        "hasAttributionIcon": {
+            "type": "boolean"
+        },
+        "hasConversionField": {
+            "type": "boolean"
+        },
+        "showMaximumRadiusAlert": {
+            "type": "boolean"
+        },
+        "conversionDefaultRadius": {
+            "type": "integer"
+        },
+        "conversionMaximumRadius": {
+            "type": "integer"
+        },
+        "conversionMinimumRadius": {
+            "type": "integer"
+        },
+        "conversionRadiusDefaults": {
+            "type": "boolean"
+        },
+        "hasCustomPolygonConversion": {
+            "type": "boolean"
+        },
+        "showConversionMaximumRadiusAlert": {
+            "type": "boolean"
+        },
+        "maximumRadius": {
+            "type": "integer"
+        },
+        "geofenceInputLabel": {
+            "type": "string"
+        },
+        "geofenceInputEditable": {
+            "type": "boolean"
+        },
+        "maximumAllowedZips": {
+            "type": "integer"
+        },
+        "showImage": {
+            "type": "boolean"
+        },
+        "targetingImgPath": {
+            "type": "string"
+        },
+        "conversionImgPath": {
+            "type": "string"
+        }
+    },
+    "additionalProperties": false
+}

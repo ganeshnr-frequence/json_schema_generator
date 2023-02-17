@@ -1,0 +1,53 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "$schema": {
+            "type": "string"
+        },
+        "required": {
+            "type": "object",
+            "properties": {
+                "text": {
+                    "type": "string"
+                },
+                "isRequired": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "isRequired",
+                "text"
+            ],
+            "additionalProperties": false
+        },
+        "dependentStrategyWidgetId": {
+            "type": "string"
+        },
+        "label": {
+            "type": "string"
+        },
+        "showImage": {
+            "type": "boolean"
+        },
+        "conversionDefaultRadius": {
+            "type": "integer"
+        },
+        "conversionMaximumRadius": {
+            "type": "integer"
+        },
+        "conversionMinimumRadius": {
+            "type": "integer"
+        },
+        "conversionRadiusDefaults": {
+            "type": "boolean"
+        },
+        "hasCustomPolygonConversion": {
+            "type": "boolean"
+        },
+        "showConversionMaximumRadiusAlert": {
+            "type": "boolean"
+        }
+    },
+    "additionalProperties": false
+}

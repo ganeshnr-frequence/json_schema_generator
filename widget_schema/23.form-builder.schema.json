@@ -1,0 +1,181 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "$schema": {
+            "type": "string"
+        },
+        "label": {
+            "type": "string"
+        },
+        "options": {
+            "type": "object",
+            "properties": {
+                "autoSave": {
+                    "type": [
+                        "boolean",
+                        "string"
+                    ]
+                },
+                "showLabel": {
+                    "type": "boolean"
+                },
+                "showProductSummary": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "autoSave"
+            ],
+            "additionalProperties": false
+        },
+        "collation": {
+            "type": "object",
+            "properties": {
+                "enabled": {
+                    "type": "boolean"
+                },
+                "level": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "enabled",
+                "level"
+            ],
+            "additionalProperties": false
+        },
+        "section": {
+            "type": "object",
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "displayOrder": {
+                    "type": "integer"
+                },
+                "afterId": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "id": {
+                    "type": "string"
+                },
+                "enabled": {
+                    "type": "boolean"
+                },
+                "mergeInto": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "afterId",
+                "displayOrder",
+                "enabled",
+                "id",
+                "title"
+            ],
+            "additionalProperties": false
+        },
+        "containerId": {
+            "type": "string"
+        },
+        "stylesConfig": {
+            "type": "object",
+            "properties": {
+                "container": {
+                    "type": "object",
+                    "properties": {
+                        "box-shadow": {
+                            "type": "string"
+                        },
+                        "margin": {
+                            "type": "integer"
+                        }
+                    },
+                    "required": [
+                        "box-shadow"
+                    ],
+                    "additionalProperties": false
+                }
+            },
+            "required": [
+                "container"
+            ],
+            "additionalProperties": false
+        },
+        "validation": {
+            "type": "object",
+            "properties": {
+                "message": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "message"
+            ],
+            "additionalProperties": false
+        },
+        "cssConfig": {
+            "type": "object",
+            "additionalProperties": false
+        },
+        "displayName": {
+            "type": "string"
+        },
+        "layout": {
+            "type": "string"
+        },
+        "expandSidePanel": {
+            "type": "boolean"
+        },
+        "maxInstances": {
+            "type": "integer"
+        },
+        "maximumAllowedZips": {
+            "type": "integer"
+        },
+        "showInfoIcon": {
+            "type": "boolean"
+        },
+        "tooltipText": {
+            "type": "string"
+        },
+        "errorMessages": {
+            "type": "object",
+            "properties": {
+                "required": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "required"
+            ],
+            "additionalProperties": false
+        },
+        "validators": {
+            "type": "object",
+            "properties": {
+                "required": {
+                    "type": "null"
+                }
+            },
+            "required": [
+                "required"
+            ],
+            "additionalProperties": false
+        },
+        "processAutoCompleteDependentData": {
+            "type": "boolean"
+        },
+        "addBtnLocation": {
+            "type": "string"
+        },
+        "isMultiscreenWidget": {
+            "type": "boolean"
+        }
+    },
+    "additionalProperties": false
+}

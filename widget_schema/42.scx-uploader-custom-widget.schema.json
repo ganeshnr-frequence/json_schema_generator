@@ -1,0 +1,84 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "$schema": {
+            "type": "string"
+        },
+        "options": {
+            "type": "object",
+            "properties": {
+                "autoSave": {
+                    "type": "string"
+                },
+                "showLabel": {
+                    "type": "boolean"
+                },
+                "showProductSummary": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "autoSave",
+                "showLabel",
+                "showProductSummary"
+            ],
+            "additionalProperties": false
+        },
+        "collation": {
+            "type": "object",
+            "properties": {
+                "enabled": {
+                    "type": "boolean"
+                },
+                "level": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "enabled",
+                "level"
+            ],
+            "additionalProperties": false
+        },
+        "networks": {
+            "type": "object",
+            "properties": {
+                "maxSelection": {
+                    "type": "integer"
+                },
+                "minSelection": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "maxSelection",
+                "minSelection"
+            ],
+            "additionalProperties": false
+        },
+        "required": {
+            "type": "object",
+            "properties": {
+                "text": {
+                    "type": "string"
+                },
+                "isRequired": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "isRequired",
+                "text"
+            ],
+            "additionalProperties": false
+        },
+        "widgetDescription": {
+            "type": "string"
+        },
+        "label": {
+            "type": "string"
+        }
+    },
+    "additionalProperties": false
+}

@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "$schema": {
+            "type": "string"
+        },
+        "calculationModel": {
+            "type": "string"
+        },
+        "showFlightTacticEditModal": {
+            "type": "boolean"
+        },
+        "showFlightBudgetImpressionsToggle": {
+            "type": "boolean"
+        },
+        "disableRealizedData": {
+            "type": "boolean"
+        }
+    },
+    "additionalProperties": false
+}

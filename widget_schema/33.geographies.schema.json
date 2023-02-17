@@ -1,0 +1,307 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "$schema": {
+            "type": "string"
+        },
+        "label": {
+            "type": "string"
+        },
+        "layout": {
+            "type": "string"
+        },
+        "options": {
+            "type": "object",
+            "properties": {
+                "autoSave": {
+                    "type": "string"
+                },
+                "showLabel": {
+                    "type": "boolean"
+                },
+                "showProductSummary": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "autoSave",
+                "showLabel",
+                "showProductSummary"
+            ],
+            "additionalProperties": false
+        },
+        "collation": {
+            "type": "object",
+            "properties": {
+                "level": {
+                    "type": "string"
+                },
+                "enabled": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "enabled"
+            ],
+            "additionalProperties": false
+        },
+        "displayName": {
+            "type": "string"
+        },
+        "expandSidePanel": {
+            "type": "boolean"
+        },
+        "conversionDefaultRadius": {
+            "type": "integer"
+        },
+        "conversionMaximumRadius": {
+            "type": "integer"
+        },
+        "conversionMinimumRadius": {
+            "type": "integer"
+        },
+        "conversionRadiusDefaults": {
+            "type": "boolean"
+        },
+        "hasCustomPolygonConversion": {
+            "type": "boolean"
+        },
+        "showConversionMaximumRadiusAlert": {
+            "type": "boolean"
+        },
+        "layoutMode": {
+            "type": "string"
+        },
+        "enableClusterMode": {
+            "type": "boolean"
+        },
+        "clusterModeZoomLevel": {
+            "type": "integer"
+        },
+        "required": {
+            "type": "object",
+            "properties": {
+                "text": {
+                    "type": "string"
+                },
+                "isRequired": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "isRequired",
+                "text"
+            ],
+            "additionalProperties": false
+        },
+        "readOnly": {
+            "type": "boolean"
+        },
+        "showCardLabel": {
+            "type": "boolean"
+        },
+        "conversionType": {
+            "type": "string"
+        },
+        "conversionLabel": {
+            "type": "string"
+        },
+        "hasOfflineVisits": {
+            "type": "boolean"
+        },
+        "defaultRadiusType": {
+            "type": "string"
+        },
+        "hasAttributionIcon": {
+            "type": "boolean"
+        },
+        "hasConversionField": {
+            "type": "boolean"
+        },
+        "showMaximumRadiusAlert": {
+            "type": "boolean"
+        },
+        "hideHeader": {
+            "type": "boolean"
+        },
+        "hasGroupedProductLabel": {
+            "type": "boolean"
+        },
+        "isOuterHeaderHidden": {
+            "type": "boolean"
+        },
+        "layoutStyleConfig": {
+            "type": "object",
+            "properties": {
+                "container": {
+                    "type": "object",
+                    "properties": {
+                        "padding": {
+                            "type": "integer"
+                        },
+                        "marginTop": {
+                            "type": "string"
+                        },
+                        "height": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "height",
+                        "marginTop",
+                        "padding"
+                    ],
+                    "additionalProperties": false
+                },
+                "card": {
+                    "type": "object",
+                    "properties": {
+                        "position": {
+                            "type": "string"
+                        },
+                        "top": {
+                            "type": "string"
+                        },
+                        "left": {
+                            "type": "string"
+                        },
+                        "width": {
+                            "type": "string"
+                        },
+                        "height": {
+                            "type": "string"
+                        },
+                        "margin": {
+                            "type": "integer"
+                        },
+                        "padding": {
+                            "type": "integer"
+                        },
+                        "maxWidth": {
+                            "type": "string"
+                        },
+                        "header": {
+                            "type": "object",
+                            "properties": {
+                                "position": {
+                                    "type": "string"
+                                },
+                                "width": {
+                                    "type": "string"
+                                },
+                                "margin": {
+                                    "type": "string"
+                                },
+                                "z-index": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "margin",
+                                "position",
+                                "width",
+                                "z-index"
+                            ],
+                            "additionalProperties": false
+                        }
+                    },
+                    "required": [
+                        "height",
+                        "left",
+                        "margin",
+                        "maxWidth",
+                        "padding",
+                        "position",
+                        "top",
+                        "width"
+                    ],
+                    "additionalProperties": false
+                },
+                "cardContent": {
+                    "type": "object",
+                    "properties": {
+                        "padding": {
+                            "type": "integer"
+                        },
+                        "margin": {
+                            "type": "integer"
+                        }
+                    },
+                    "required": [
+                        "margin",
+                        "padding"
+                    ],
+                    "additionalProperties": false
+                },
+                "widgetContainer": {
+                    "type": "object",
+                    "properties": {
+                        "top": {
+                            "type": "string"
+                        },
+                        "left": {
+                            "type": "string"
+                        },
+                        "height": {
+                            "type": "string"
+                        },
+                        "width": {
+                            "type": "string"
+                        },
+                        "background": {
+                            "type": "string"
+                        },
+                        "maxHeight": {
+                            "type": "string"
+                        },
+                        "moreBtnPositonTop": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "background",
+                        "height",
+                        "left",
+                        "top",
+                        "width"
+                    ],
+                    "additionalProperties": false
+                }
+            },
+            "required": [
+                "card",
+                "cardContent",
+                "container",
+                "widgetContainer"
+            ],
+            "additionalProperties": false
+        },
+        "defaultRadius": {
+            "type": "integer"
+        },
+        "minimumRadius": {
+            "type": "integer"
+        },
+        "radiusOptions": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "text": {
+                        "type": "string"
+                    },
+                    "value": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "text",
+                    "value"
+                ],
+                "additionalProperties": false
+            }
+        }
+    },
+    "additionalProperties": false
+}
