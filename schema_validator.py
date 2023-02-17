@@ -65,6 +65,7 @@ for e in entries:
     f = open('./widget_schema/' + e)
     schema = json.load(f)
     
+    print('Validating ' + e)
     for j in filtered_result:
         validator = Draft7Validator(schema=schema)
         if validator.is_valid(json.loads(j['config_json'])) != True:
