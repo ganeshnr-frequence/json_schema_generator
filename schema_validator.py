@@ -1,10 +1,26 @@
 import os
 import json
+import sys
 from util import is_json
 from jsonschema import Draft7Validator
 from db_executor import get_widget_config, get_strategy_widget_config
 
-entries = os.listdir('widget_schema/')
+#default value for folder
+folder_name = 'widget_schema'
+
+n = len(sys.argv)
+
+# take folder name from the command line argument
+if n > 1:
+    folder_name = sys.argv[1]
+    print('Folder name: ' + folder_name)
+    
+folder_name = folder_name + "/"
+
+entries = os.listdir(folder_name)
+
+
+print('Total no of schemas: ' + str(len(entries)))
 
     
 #variables
@@ -20,7 +36,7 @@ for e in entries:
     
     #validate these configs one by one with the schema
     # Opening JSON file
-    f = open('./widget_schema/' + e)
+    f = open('./' + folder_name + '/' + e)
     schema = json.load(f)
     
     print('Validating ' + e)
