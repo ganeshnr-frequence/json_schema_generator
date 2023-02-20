@@ -1,0 +1,89 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "header": {
+            "type": "string"
+        },
+        "infoMessage1": {
+            "type": "string"
+        },
+        "infoMessage2": {
+            "type": "string"
+        },
+        "infoMessage3": {
+            "type": "string"
+        },
+        "uploadEndPoint": {
+            "type": "string"
+        },
+        "deleteEndPoint": {
+            "type": "string"
+        },
+        "uploadSuccessInfo": {
+            "type": "object",
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "message": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "message",
+                "title"
+            ],
+            "additionalProperties": false
+        },
+        "dependentOn": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "additionalProperties": false
+        },
+        "fileUploadValidations": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string"
+                    },
+                    "message": {
+                        "type": "string"
+                    },
+                    "toastMessage": {
+                        "type": "string"
+                    },
+                    "value": {
+                        "type": [
+                            "integer",
+                            "string"
+                        ]
+                    },
+                    "maxSize": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "message",
+                    "toastMessage",
+                    "type"
+                ],
+                "additionalProperties": false
+            }
+        }
+    },
+    "required": [
+        "header",
+        "infoMessage3"
+    ],
+    "additionalProperties": false
+}

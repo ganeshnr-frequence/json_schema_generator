@@ -1,0 +1,85 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "itemsSelectedInfoMsg": {
+            "type": "string"
+        },
+        "itemsSelectedText": {
+            "type": "string"
+        },
+        "minSelectionItemsErrorMsg": {
+            "type": "string"
+        },
+        "maxSelectionItemsErrorMsg": {
+            "type": "string"
+        },
+        "dependentOn": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "additionalProperties": false
+        },
+        "validations": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string"
+                    },
+                    "minCount": {
+                        "type": "integer"
+                    },
+                    "maxCount": {
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                    "type"
+                ],
+                "additionalProperties": false
+            }
+        },
+        "fileReplaceConfirmation": {
+            "type": "object",
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "content": {
+                    "type": "string"
+                },
+                "cancelButtonText": {
+                    "type": "string"
+                },
+                "submitButtonText": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "cancelButtonText",
+                "content",
+                "submitButtonText",
+                "title"
+            ],
+            "additionalProperties": false
+        }
+    },
+    "required": [
+        "dependentOn",
+        "fileReplaceConfirmation",
+        "itemsSelectedInfoMsg",
+        "itemsSelectedText",
+        "maxSelectionItemsErrorMsg",
+        "minSelectionItemsErrorMsg",
+        "validations"
+    ],
+    "additionalProperties": false
+}

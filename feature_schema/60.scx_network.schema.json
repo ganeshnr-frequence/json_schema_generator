@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "displayOrder": {
+            "type": "integer"
+        },
+        "leftNavLabel": {
+            "type": "string"
+        },
+        "label": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "displayOrder",
+        "id"
+    ],
+    "additionalProperties": false
+}

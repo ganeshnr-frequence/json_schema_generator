@@ -1,0 +1,179 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "formFields": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "label": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string"
+                    },
+                    "placeholder": {
+                        "type": "string"
+                    },
+                    "formLayout": {
+                        "type": "object",
+                        "properties": {
+                            "targeting": {
+                                "type": "object",
+                                "properties": {
+                                    "element": {
+                                        "type": "object",
+                                        "properties": {
+                                            "label": {
+                                                "type": "string"
+                                            },
+                                            "container": {
+                                                "type": "string"
+                                            },
+                                            "control": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "required": [
+                                            "container",
+                                            "control",
+                                            "label"
+                                        ],
+                                        "additionalProperties": false
+                                    }
+                                },
+                                "required": [
+                                    "element"
+                                ],
+                                "additionalProperties": false
+                            },
+                            "facebookurl": {
+                                "type": "object",
+                                "properties": {
+                                    "element": {
+                                        "type": "object",
+                                        "properties": {
+                                            "label": {
+                                                "type": "string"
+                                            },
+                                            "container": {
+                                                "type": "string"
+                                            },
+                                            "control": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "required": [
+                                            "container",
+                                            "control",
+                                            "label"
+                                        ],
+                                        "additionalProperties": false
+                                    }
+                                },
+                                "required": [
+                                    "element"
+                                ],
+                                "additionalProperties": false
+                            },
+                            "placement_instagram": {
+                                "type": "object",
+                                "properties": {
+                                    "element": {
+                                        "type": "object",
+                                        "properties": {
+                                            "label": {
+                                                "type": "string"
+                                            },
+                                            "container": {
+                                                "type": "string"
+                                            },
+                                            "control": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "required": [
+                                            "container",
+                                            "control",
+                                            "label"
+                                        ],
+                                        "additionalProperties": false
+                                    }
+                                },
+                                "required": [
+                                    "element"
+                                ],
+                                "additionalProperties": false
+                            },
+                            "placement_messenger": {
+                                "type": "object",
+                                "properties": {
+                                    "element": {
+                                        "type": "object",
+                                        "properties": {
+                                            "label": {
+                                                "type": "string"
+                                            },
+                                            "container": {
+                                                "type": "string"
+                                            },
+                                            "control": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "required": [
+                                            "container",
+                                            "control",
+                                            "label"
+                                        ],
+                                        "additionalProperties": false
+                                    }
+                                },
+                                "required": [
+                                    "element"
+                                ],
+                                "additionalProperties": false
+                            }
+                        },
+                        "additionalProperties": false
+                    },
+                    "validations": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "type": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "message",
+                                "type"
+                            ],
+                            "additionalProperties": false
+                        }
+                    }
+                },
+                "required": [
+                    "formLayout",
+                    "id",
+                    "label",
+                    "placeholder",
+                    "type"
+                ],
+                "additionalProperties": false
+            }
+        }
+    },
+    "required": [
+        "formFields"
+    ],
+    "additionalProperties": false
+}

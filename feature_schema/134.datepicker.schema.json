@@ -1,0 +1,201 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "label": {
+            "type": "string"
+        },
+        "type": {
+            "type": "string"
+        },
+        "placeholder": {
+            "type": "string"
+        },
+        "formLayout": {
+            "type": "object",
+            "properties": {
+                "orderName": {
+                    "type": "object",
+                    "properties": {
+                        "element": {
+                            "type": "object",
+                            "properties": {
+                                "label": {
+                                    "type": "string"
+                                },
+                                "container": {
+                                    "type": "string"
+                                },
+                                "control": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "container",
+                                "control",
+                                "label"
+                            ],
+                            "additionalProperties": false
+                        }
+                    },
+                    "required": [
+                        "element"
+                    ],
+                    "additionalProperties": false
+                }
+            },
+            "required": [
+                "orderName"
+            ],
+            "additionalProperties": false
+        },
+        "validations": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string"
+                    },
+                    "message": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "message",
+                    "type"
+                ],
+                "additionalProperties": false
+            }
+        },
+        "additional": {
+            "type": "object",
+            "properties": {
+                "config": {
+                    "type": "object",
+                    "properties": {
+                        "offset": {
+                            "type": "object",
+                            "properties": {
+                                "type": {
+                                    "type": "string"
+                                },
+                                "count": {
+                                    "type": "integer"
+                                }
+                            },
+                            "required": [
+                                "count",
+                                "type"
+                            ],
+                            "additionalProperties": false
+                        },
+                        "durationConfig": {
+                            "type": "object",
+                            "properties": {
+                                "default": {
+                                    "type": "object",
+                                    "properties": {
+                                        "type": {
+                                            "type": "string"
+                                        },
+                                        "duration": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "required": [
+                                        "duration",
+                                        "type"
+                                    ],
+                                    "additionalProperties": false
+                                },
+                                "min": {
+                                    "type": "object",
+                                    "properties": {
+                                        "type": {
+                                            "type": "string"
+                                        },
+                                        "duration": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "required": [
+                                        "duration",
+                                        "type"
+                                    ],
+                                    "additionalProperties": false
+                                },
+                                "max": {
+                                    "type": "object",
+                                    "properties": {
+                                        "type": {
+                                            "type": "string"
+                                        },
+                                        "duration": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "required": [
+                                        "duration",
+                                        "type"
+                                    ],
+                                    "additionalProperties": false
+                                }
+                            },
+                            "required": [
+                                "default",
+                                "max",
+                                "min"
+                            ],
+                            "additionalProperties": false
+                        },
+                        "start": {
+                            "type": "object",
+                            "properties": {
+                                "label": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "label"
+                            ],
+                            "additionalProperties": false
+                        },
+                        "end": {
+                            "type": "object",
+                            "properties": {
+                                "label": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "label"
+                            ],
+                            "additionalProperties": false
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                "subType": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "config"
+            ],
+            "additionalProperties": false
+        }
+    },
+    "required": [
+        "additional",
+        "formLayout",
+        "id",
+        "label",
+        "placeholder",
+        "type"
+    ],
+    "additionalProperties": false
+}

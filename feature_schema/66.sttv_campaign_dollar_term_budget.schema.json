@@ -1,0 +1,59 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "rateCardLabel": {
+            "type": "string"
+        },
+        "validations": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string"
+                    },
+                    "message": {
+                        "type": "string"
+                    },
+                    "autoIndMinWeeks": {
+                        "type": "integer"
+                    },
+                    "otherIndMinWeeks": {
+                        "type": "integer"
+                    },
+                    "geoType": {
+                        "type": "string"
+                    },
+                    "audience": {
+                        "type": "boolean"
+                    },
+                    "value": {
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                    "message",
+                    "type"
+                ],
+                "additionalProperties": false
+            }
+        },
+        "industries": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        }
+    },
+    "required": [
+        "id",
+        "industries",
+        "rateCardLabel",
+        "validations"
+    ],
+    "additionalProperties": false
+}

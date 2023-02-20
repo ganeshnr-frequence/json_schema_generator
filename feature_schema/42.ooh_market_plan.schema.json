@@ -1,0 +1,50 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "label": {
+            "type": "string"
+        },
+        "errorMessages": {
+            "type": "object",
+            "properties": {
+                "required": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "required"
+            ],
+            "additionalProperties": false
+        },
+        "validations": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string"
+                    },
+                    "message": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "message",
+                    "type"
+                ],
+                "additionalProperties": false
+            }
+        }
+    },
+    "required": [
+        "errorMessages",
+        "id",
+        "label",
+        "validations"
+    ],
+    "additionalProperties": false
+}

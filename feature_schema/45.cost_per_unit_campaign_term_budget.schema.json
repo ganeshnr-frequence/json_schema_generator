@@ -1,0 +1,67 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "label": {
+            "type": "string"
+        },
+        "dependentOn": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "actions": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "type": "string"
+                            },
+                            "operation": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "operation",
+                            "type"
+                        ],
+                        "additionalProperties": false
+                    }
+                }
+            },
+            "required": [
+                "actions",
+                "name"
+            ],
+            "additionalProperties": false
+        },
+        "validations": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string"
+                    },
+                    "message": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "message",
+                    "type"
+                ],
+                "additionalProperties": false
+            }
+        },
+        "id": {
+            "type": "string"
+        },
+        "showReachFrequency": {
+            "type": "boolean"
+        }
+    },
+    "additionalProperties": false
+}

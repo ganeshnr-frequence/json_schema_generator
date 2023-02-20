@@ -1,0 +1,116 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "conversion": {
+            "type": "object",
+            "properties": {
+                "label": {
+                    "type": "string"
+                },
+                "show": {
+                    "type": "boolean"
+                },
+                "default": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "default",
+                "label",
+                "show"
+            ],
+            "additionalProperties": false
+        },
+        "radiusType": {
+            "type": "object",
+            "properties": {
+                "label": {
+                    "type": "string"
+                },
+                "show": {
+                    "type": "boolean"
+                },
+                "default": {
+                    "type": "string"
+                },
+                "defaultOptions": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "text": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": "string"
+                            },
+                            "radiusValue": {
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "radiusValue",
+                            "text",
+                            "value"
+                        ],
+                        "additionalProperties": false
+                    }
+                }
+            },
+            "required": [
+                "default",
+                "defaultOptions",
+                "label",
+                "show"
+            ],
+            "additionalProperties": false
+        },
+        "radius": {
+            "type": "object",
+            "properties": {
+                "label": {
+                    "type": "string"
+                },
+                "show": {
+                    "type": "boolean"
+                },
+                "default": {
+                    "type": "integer"
+                },
+                "metric": {
+                    "type": "string"
+                },
+                "readOnly": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "default",
+                "label",
+                "metric",
+                "readOnly",
+                "show"
+            ],
+            "additionalProperties": false
+        },
+        "required": {
+            "type": "boolean"
+        },
+        "minGeofenceLength": {
+            "type": "integer"
+        },
+        "isDuplicate": {
+            "type": "boolean"
+        }
+    },
+    "required": [
+        "conversion",
+        "isDuplicate",
+        "minGeofenceLength",
+        "radius",
+        "radiusType",
+        "required"
+    ],
+    "additionalProperties": false
+}

@@ -1,0 +1,507 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "label": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "placeholder": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "type": {
+            "type": "string"
+        },
+        "id": {
+            "type": "string"
+        },
+        "validators": {
+            "type": "object",
+            "properties": {
+                "required": {
+                    "type": "null"
+                },
+                "maxLength": {
+                    "type": "null"
+                },
+                "daypartCustomValidator": {
+                    "type": "null"
+                }
+            },
+            "additionalProperties": false
+        },
+        "group": {
+            "anyOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "enabled": {
+                            "type": "boolean"
+                        },
+                        "id": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "enabled",
+                        "id"
+                    ],
+                    "additionalProperties": false
+                },
+                {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "type": {
+                                "type": "string"
+                            },
+                            "group": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "type": "string"
+                                        },
+                                        "label": {
+                                            "type": "string"
+                                        },
+                                        "type": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "id",
+                                        "label",
+                                        "type"
+                                    ],
+                                    "additionalProperties": false
+                                }
+                            }
+                        },
+                        "required": [
+                            "group",
+                            "id",
+                            "type"
+                        ],
+                        "additionalProperties": false
+                    }
+                }
+            ]
+        },
+        "errorMessages": {
+            "type": "object",
+            "properties": {
+                "required": {
+                    "type": "string"
+                },
+                "maxLength": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false
+        },
+        "maxLength": {
+            "type": "integer"
+        },
+        "multiple": {
+            "type": "boolean"
+        },
+        "list": {
+            "type": "array",
+            "items": {
+                "anyOf": [
+                    {
+                        "type": "string"
+                    },
+                    {
+                        "type": "object",
+                        "properties": {
+                            "text": {
+                                "type": "string"
+                            },
+                            "budget": {
+                                "type": "integer"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "text"
+                        ],
+                        "additionalProperties": false
+                    }
+                ]
+            }
+        },
+        "required": {
+            "type": "boolean"
+        },
+        "inputType": {
+            "type": "string"
+        },
+        "hasQueryKey": {
+            "type": "boolean"
+        },
+        "subType": {
+            "type": "string"
+        },
+        "widgetName": {
+            "type": "string"
+        },
+        "hasGeospots": {
+            "type": "boolean"
+        },
+        "additional": {
+            "type": "object",
+            "properties": {
+                "subType": {
+                    "type": "string"
+                },
+                "uniqueField": {
+                    "type": "string"
+                },
+                "selectionModelRenderer": {
+                    "type": "string"
+                },
+                "placeholder": {
+                    "type": "string"
+                },
+                "onDataChangeAPI": {
+                    "type": "object",
+                    "properties": {
+                        "endPoint": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "endPoint"
+                    ],
+                    "additionalProperties": false
+                },
+                "api": {
+                    "type": "object",
+                    "properties": {
+                        "endPoint": {
+                            "type": "string"
+                        },
+                        "requestObject": {
+                            "type": "object",
+                            "properties": {
+                                "term": {
+                                    "type": "object",
+                                    "properties": {
+                                        "dependentOn": {
+                                            "type": "object",
+                                            "properties": {
+                                                "attributeKey": {
+                                                    "type": "string"
+                                                },
+                                                "fieldFromAttributeValue": {
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": [
+                                                "attributeKey",
+                                                "fieldFromAttributeValue"
+                                            ],
+                                            "additionalProperties": false
+                                        }
+                                    },
+                                    "required": [
+                                        "dependentOn"
+                                    ],
+                                    "additionalProperties": false
+                                },
+                                "opportunityOwnerUid": {
+                                    "type": "object",
+                                    "properties": {
+                                        "dependentOn": {
+                                            "type": "object",
+                                            "properties": {
+                                                "attributeKey": {
+                                                    "type": "string"
+                                                },
+                                                "fieldFromAttributeValue": {
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": [
+                                                "attributeKey",
+                                                "fieldFromAttributeValue"
+                                            ],
+                                            "additionalProperties": false
+                                        }
+                                    },
+                                    "required": [
+                                        "dependentOn"
+                                    ],
+                                    "additionalProperties": false
+                                },
+                                "ownerId": {
+                                    "type": "object",
+                                    "properties": {
+                                        "dependentOn": {
+                                            "type": "object",
+                                            "properties": {
+                                                "attributeKey": {
+                                                    "type": "string"
+                                                },
+                                                "fieldFromAttributeValue": {
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": [
+                                                "attributeKey",
+                                                "fieldFromAttributeValue"
+                                            ],
+                                            "additionalProperties": false
+                                        }
+                                    },
+                                    "required": [
+                                        "dependentOn"
+                                    ],
+                                    "additionalProperties": false
+                                }
+                            },
+                            "required": [
+                                "term"
+                            ],
+                            "additionalProperties": false
+                        }
+                    },
+                    "required": [
+                        "endPoint",
+                        "requestObject"
+                    ],
+                    "additionalProperties": false
+                },
+                "rows": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "columns": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "type": {
+                                            "type": "string"
+                                        },
+                                        "renderer": {
+                                            "type": "string"
+                                        },
+                                        "styleClass": {
+                                            "type": "string"
+                                        },
+                                        "hide": {
+                                            "type": "object",
+                                            "properties": {
+                                                "isEmpty": {
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": [
+                                                "isEmpty"
+                                            ],
+                                            "additionalProperties": false
+                                        },
+                                        "columnDataOptions": {
+                                            "type": "object",
+                                            "properties": {
+                                                "placeholderIfEmpty": {
+                                                    "type": [
+                                                        "null",
+                                                        "string"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "placeholderIfEmpty"
+                                            ],
+                                            "additionalProperties": false
+                                        }
+                                    },
+                                    "required": [
+                                        "renderer",
+                                        "type"
+                                    ],
+                                    "additionalProperties": false
+                                }
+                            }
+                        },
+                        "required": [
+                            "columns"
+                        ],
+                        "additionalProperties": false
+                    }
+                },
+                "usePartnerStyle": {
+                    "type": "boolean"
+                },
+                "minInputLength": {
+                    "type": "integer"
+                },
+                "createNewFieldPlaceholderText": {
+                    "type": "string"
+                },
+                "hideOnDependentAttrEmpty": {
+                    "type": "boolean"
+                },
+                "hideFormInfoText": {
+                    "type": "string"
+                },
+                "defaultDataApi": {
+                    "type": "object",
+                    "properties": {
+                        "endPoint": {
+                            "type": "string"
+                        },
+                        "requestObject": {
+                            "type": "object",
+                            "properties": {
+                                "fqAdvertiserId": {
+                                    "type": "object",
+                                    "properties": {
+                                        "dependentOn": {
+                                            "type": "object",
+                                            "properties": {
+                                                "attributeKey": {
+                                                    "type": "string"
+                                                },
+                                                "fieldFromAttributeValue": {
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": [
+                                                "attributeKey",
+                                                "fieldFromAttributeValue"
+                                            ],
+                                            "additionalProperties": false
+                                        }
+                                    },
+                                    "required": [
+                                        "dependentOn"
+                                    ],
+                                    "additionalProperties": false
+                                }
+                            },
+                            "required": [
+                                "fqAdvertiserId"
+                            ],
+                            "additionalProperties": false
+                        }
+                    },
+                    "required": [
+                        "endPoint",
+                        "requestObject"
+                    ],
+                    "additionalProperties": false
+                },
+                "createApi": {
+                    "type": "object",
+                    "properties": {
+                        "endPoint": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "endPoint"
+                    ],
+                    "additionalProperties": false
+                }
+            },
+            "required": [
+                "placeholder",
+                "rows",
+                "selectionModelRenderer",
+                "subType",
+                "uniqueField"
+            ],
+            "additionalProperties": false
+        },
+        "validations": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string"
+                    },
+                    "message": {
+                        "type": "string"
+                    },
+                    "notification": {
+                        "type": "string"
+                    },
+                    "value": {
+                        "type": "integer"
+                    }
+                },
+                "additionalProperties": false
+            }
+        },
+        "onDataChangeAPI": {
+            "type": "object",
+            "properties": {
+                "endPoint": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "endPoint"
+            ],
+            "additionalProperties": false
+        },
+        "formLayout": {
+            "type": "object",
+            "properties": {
+                "orderName": {
+                    "type": "object",
+                    "properties": {
+                        "element": {
+                            "type": "object",
+                            "properties": {
+                                "label": {
+                                    "type": "string"
+                                },
+                                "container": {
+                                    "type": "string"
+                                },
+                                "control": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "container",
+                                "control",
+                                "label"
+                            ],
+                            "additionalProperties": false
+                        }
+                    },
+                    "required": [
+                        "element"
+                    ],
+                    "additionalProperties": false
+                }
+            },
+            "required": [
+                "orderName"
+            ],
+            "additionalProperties": false
+        }
+    },
+    "additionalProperties": false
+}

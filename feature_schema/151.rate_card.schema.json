@@ -1,0 +1,210 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "formFields": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "label": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string"
+                    },
+                    "id": {
+                        "type": "string"
+                    },
+                    "affectsRate": {
+                        "type": "boolean"
+                    },
+                    "multiple": {
+                        "type": "boolean"
+                    },
+                    "displayOrder": {
+                        "type": "integer"
+                    },
+                    "additional": {
+                        "type": "object",
+                        "properties": {
+                            "subType": {
+                                "type": "string"
+                            },
+                            "uniqueField": {
+                                "type": "string"
+                            },
+                            "usePartnerStyle": {
+                                "type": "boolean"
+                            },
+                            "selectionModelRenderer": {
+                                "type": "string"
+                            },
+                            "minInputLength": {
+                                "type": "integer"
+                            },
+                            "placeholder": {
+                                "type": "string"
+                            },
+                            "rows": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "columns": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "type": {
+                                                        "type": "string"
+                                                    },
+                                                    "renderer": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "renderer",
+                                                    "type"
+                                                ],
+                                                "additionalProperties": false
+                                            }
+                                        }
+                                    },
+                                    "required": [
+                                        "columns"
+                                    ],
+                                    "additionalProperties": false
+                                }
+                            }
+                        },
+                        "required": [
+                            "minInputLength",
+                            "placeholder",
+                            "rows",
+                            "selectionModelRenderer",
+                            "subType",
+                            "uniqueField",
+                            "usePartnerStyle"
+                        ],
+                        "additionalProperties": false
+                    },
+                    "list": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "text": {
+                                    "type": "string"
+                                },
+                                "value": {
+                                    "type": "string"
+                                },
+                                "range": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "text",
+                                "value"
+                            ],
+                            "additionalProperties": false
+                        }
+                    },
+                    "hasRange": {
+                        "type": "boolean"
+                    },
+                    "placeholder": {
+                        "type": "string"
+                    },
+                    "hidden": {
+                        "type": "boolean"
+                    },
+                    "dependentOn": {
+                        "type": "object",
+                        "properties": {
+                            "attributeKey": {
+                                "type": "string"
+                            },
+                            "pathToValue": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "attributeKey",
+                            "pathToValue"
+                        ],
+                        "additionalProperties": false
+                    },
+                    "readOnly": {
+                        "type": "boolean"
+                    },
+                    "value": {
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                    "displayOrder",
+                    "id",
+                    "label",
+                    "type"
+                ],
+                "additionalProperties": false
+            }
+        },
+        "rateCard": {
+            "type": "object",
+            "properties": {
+                "rates": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "publicationName": {
+                                "type": "string"
+                            },
+                            "adSize": {
+                                "type": "string"
+                            },
+                            "pagePremium": {
+                                "type": "boolean"
+                            },
+                            "color": {
+                                "type": "boolean"
+                            },
+                            "durationRange": {
+                                "type": "string"
+                            },
+                            "budget": {
+                                "type": "string"
+                            },
+                            "website": {
+                                "type": "string"
+                            },
+                            "cpm": {
+                                "type": "string"
+                            },
+                            "type": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "budget",
+                            "durationRange"
+                        ],
+                        "additionalProperties": false
+                    }
+                }
+            },
+            "required": [
+                "rates"
+            ],
+            "additionalProperties": false
+        }
+    },
+    "required": [
+        "formFields",
+        "rateCard"
+    ],
+    "additionalProperties": false
+}

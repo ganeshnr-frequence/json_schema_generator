@@ -1,0 +1,108 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "label": {
+            "type": "string"
+        },
+        "validations": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string"
+                    },
+                    "message": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "message",
+                    "type"
+                ],
+                "additionalProperties": false
+            }
+        },
+        "MinRequiredValue": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "quantity": {
+                        "type": "integer"
+                    },
+                    "impressions": {
+                        "type": "integer"
+                    },
+                    "investment": {
+                        "type": "integer"
+                    },
+                    "trp": {
+                        "type": "integer"
+                    },
+                    "cpm": {
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                    "impressions",
+                    "investment",
+                    "name",
+                    "quantity",
+                    "trp"
+                ],
+                "additionalProperties": false
+            }
+        },
+        "hasQueryKey": {
+            "type": "boolean"
+        },
+        "enableParentSelection": {
+            "type": "boolean"
+        },
+        "widgetName": {
+            "type": "string"
+        },
+        "dynamicallyLoadChildren": {
+            "type": "boolean"
+        },
+        "validators": {
+            "type": "object",
+            "properties": {
+                "required": {
+                    "type": "null"
+                }
+            },
+            "required": [
+                "required"
+            ],
+            "additionalProperties": false
+        },
+        "errorMessages": {
+            "type": "object",
+            "properties": {
+                "required": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "required"
+            ],
+            "additionalProperties": false
+        }
+    },
+    "required": [
+        "MinRequiredValue",
+        "id",
+        "label",
+        "validations"
+    ],
+    "additionalProperties": false
+}

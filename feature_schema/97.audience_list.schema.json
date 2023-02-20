@@ -1,0 +1,184 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "Ages": {
+            "type": "object",
+            "properties": {
+                "groupHeaders": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "groupHeaders"
+            ],
+            "additionalProperties": false
+        },
+        "HouseholdIncome": {
+            "type": "object",
+            "properties": {
+                "groupHeaders": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "groupHeaders"
+            ],
+            "additionalProperties": false
+        },
+        "Vehicles": {
+            "type": "object",
+            "properties": {
+                "groupHeaders": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "groupHeaders"
+            ],
+            "additionalProperties": false
+        },
+        "Gender": {
+            "type": "object",
+            "properties": {
+                "groupHeaders": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "groupHeaders"
+            ],
+            "additionalProperties": false
+        },
+        "Ethnicity": {
+            "type": "object",
+            "properties": {
+                "groupHeaders": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "groupHeaders"
+            ],
+            "additionalProperties": false
+        },
+        "Entertainment": {
+            "type": "object",
+            "properties": {
+                "groupHeaders": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "groupHeaders"
+            ],
+            "additionalProperties": false
+        },
+        "Sports": {
+            "type": "object",
+            "properties": {
+                "groupHeaders": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "groupHeaders"
+            ],
+            "additionalProperties": false
+        },
+        "Travel": {
+            "type": "object",
+            "properties": {
+                "groupHeaders": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "groupHeaders"
+            ],
+            "additionalProperties": false
+        },
+        "Income": {
+            "type": "object",
+            "properties": {
+                "groupHeaders": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "groupHeaders"
+            ],
+            "additionalProperties": false
+        },
+        "Interests": {
+            "type": "object",
+            "properties": {
+                "groupHeaders": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "groupHeaders"
+            ],
+            "additionalProperties": false
+        },
+        "Political": {
+            "type": "object",
+            "properties": {
+                "groupHeaders": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "groupHeaders"
+            ],
+            "additionalProperties": false
+        }
+    },
+    "required": [
+        "Ages",
+        "Entertainment",
+        "Ethnicity",
+        "Gender",
+        "HouseholdIncome",
+        "Income",
+        "Interests",
+        "Sports",
+        "Travel",
+        "Vehicles"
+    ],
+    "additionalProperties": false
+}

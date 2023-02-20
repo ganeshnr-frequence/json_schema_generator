@@ -1,0 +1,165 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "options": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "budget": {
+                        "type": "object",
+                        "properties": {
+                            "default": {
+                                "type": "integer"
+                            },
+                            "min": {
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "default"
+                        ],
+                        "additionalProperties": false
+                    },
+                    "cpm": {
+                        "type": "object",
+                        "properties": {
+                            "default": {
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "default"
+                        ],
+                        "additionalProperties": false
+                    },
+                    "dateRange": {
+                        "type": "object",
+                        "properties": {
+                            "weeks": {
+                                "type": "object",
+                                "properties": {
+                                    "min": {
+                                        "type": "integer"
+                                    },
+                                    "industryMin": {
+                                        "type": "integer"
+                                    }
+                                },
+                                "required": [
+                                    "min"
+                                ],
+                                "additionalProperties": false
+                            }
+                        },
+                        "required": [
+                            "weeks"
+                        ],
+                        "additionalProperties": false
+                    },
+                    "monthlyBudget": {
+                        "type": "object",
+                        "properties": {
+                            "min": {
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "min"
+                        ],
+                        "additionalProperties": false
+                    },
+                    "rateCard": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "label": {
+                                    "type": "string"
+                                },
+                                "geoTypes": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                },
+                                "audience": {
+                                    "type": "boolean"
+                                },
+                                "value": {
+                                    "type": "integer"
+                                }
+                            },
+                            "required": [
+                                "audience",
+                                "geoTypes",
+                                "label",
+                                "value"
+                            ],
+                            "additionalProperties": false
+                        }
+                    },
+                    "campaign": {
+                        "type": "object",
+                        "properties": {
+                            "days": {
+                                "type": "object",
+                                "properties": {
+                                    "default": {
+                                        "type": "integer"
+                                    }
+                                },
+                                "required": [
+                                    "default"
+                                ],
+                                "additionalProperties": false
+                            }
+                        },
+                        "required": [
+                            "days"
+                        ],
+                        "additionalProperties": false
+                    }
+                },
+                "required": [
+                    "budget",
+                    "cpm",
+                    "dateRange",
+                    "rateCard"
+                ],
+                "additionalProperties": false
+            }
+        },
+        "validations": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string"
+                    },
+                    "message": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "message",
+                    "type"
+                ],
+                "additionalProperties": false
+            }
+        },
+        "industries": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        }
+    },
+    "required": [
+        "options",
+        "validations"
+    ],
+    "additionalProperties": false
+}

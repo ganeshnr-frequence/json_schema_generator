@@ -1,0 +1,82 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "formFields": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string"
+                    },
+                    "id": {
+                        "type": "string"
+                    },
+                    "label": {
+                        "type": "string"
+                    },
+                    "isHidden": {
+                        "type": "boolean"
+                    },
+                    "isReadOnly": {
+                        "type": "boolean"
+                    },
+                    "options": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "label": {
+                                    "type": "string"
+                                },
+                                "value": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "label",
+                                "value"
+                            ],
+                            "additionalProperties": false
+                        }
+                    },
+                    "hint": {
+                        "type": "object",
+                        "properties": {
+                            "Traffic - Consideration": {
+                                "type": "string"
+                            },
+                            "Reach - Awareness": {
+                                "type": "string"
+                            },
+                            "Video Views - Consideration": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "Reach - Awareness",
+                            "Traffic - Consideration",
+                            "Video Views - Consideration"
+                        ],
+                        "additionalProperties": false
+                    }
+                },
+                "required": [
+                    "hint",
+                    "id",
+                    "isHidden",
+                    "isReadOnly",
+                    "label",
+                    "options",
+                    "type"
+                ],
+                "additionalProperties": false
+            }
+        }
+    },
+    "required": [
+        "formFields"
+    ],
+    "additionalProperties": false
+}

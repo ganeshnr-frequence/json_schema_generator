@@ -1,0 +1,75 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "features": {
+            "type": "object",
+            "properties": {
+                "showLocationMenu": {
+                    "type": "boolean"
+                },
+                "enableGeofence": {
+                    "type": "boolean"
+                },
+                "enableRegionSelection": {
+                    "type": "boolean"
+                },
+                "addLocation": {
+                    "type": "boolean"
+                },
+                "enableLocationsBulkUpload": {
+                    "type": "boolean"
+                },
+                "enableGeofencesBulkUpload": {
+                    "type": "boolean"
+                },
+                "showLoadRegions": {
+                    "type": "boolean"
+                },
+                "showGeofenceName": {
+                    "type": "boolean"
+                },
+                "enableAddRemoveZips": {
+                    "type": "boolean"
+                },
+                "canEditLocationName": {
+                    "type": "boolean"
+                },
+                "showGeoStats": {
+                    "type": "boolean"
+                },
+                "showCardLabel": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "addLocation",
+                "canEditLocationName",
+                "enableAddRemoveZips",
+                "enableGeofence",
+                "enableGeofencesBulkUpload",
+                "enableLocationsBulkUpload",
+                "enableRegionSelection",
+                "showCardLabel",
+                "showGeoStats",
+                "showGeofenceName",
+                "showLoadRegions",
+                "showLocationMenu"
+            ],
+            "additionalProperties": false
+        },
+        "validations": {
+            "type": "object",
+            "properties": {
+                "text": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "text"
+            ],
+            "additionalProperties": false
+        }
+    },
+    "additionalProperties": false
+}

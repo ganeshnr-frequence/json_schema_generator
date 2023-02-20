@@ -1,0 +1,16 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "toggleDefaultSelected": {
+            "type": "string"
+        },
+        "toggleLabel": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "toggleLabel"
+    ],
+    "additionalProperties": false
+}

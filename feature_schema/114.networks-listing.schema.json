@@ -1,0 +1,141 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "duplicateNotificationMessage": {
+            "type": "string"
+        },
+        "duplicateItemRemovedNotificationMessage": {
+            "type": "string"
+        },
+        "validations": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string"
+                    },
+                    "message": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "message",
+                    "type"
+                ],
+                "additionalProperties": false
+            }
+        },
+        "groups": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string"
+                    },
+                    "sectionTitle": {
+                        "type": "string"
+                    },
+                    "tooltipText": {
+                        "type": "string"
+                    },
+                    "placeholderText": {
+                        "type": "string"
+                    },
+                    "allowedSeparatorKey": {
+                        "type": "string"
+                    },
+                    "sectionFooterText": {
+                        "type": "string"
+                    },
+                    "item": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "type": {
+                                    "type": "string"
+                                },
+                                "validations": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "type": {
+                                                "type": "string"
+                                            },
+                                            "message": {
+                                                "type": "string"
+                                            },
+                                            "toastMessage": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "required": [
+                                            "message",
+                                            "toastMessage",
+                                            "type"
+                                        ],
+                                        "additionalProperties": false
+                                    }
+                                }
+                            },
+                            "required": [
+                                "type",
+                                "validations"
+                            ],
+                            "additionalProperties": false
+                        }
+                    },
+                    "validations": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "type": {
+                                    "type": "string"
+                                },
+                                "value": {
+                                    "type": "integer"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "toastMessage": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "message",
+                                "toastMessage",
+                                "type"
+                            ],
+                            "additionalProperties": false
+                        }
+                    },
+                    "itemFilters": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "required": [
+                    "allowedSeparatorKey",
+                    "item",
+                    "sectionTitle",
+                    "tooltipText",
+                    "type",
+                    "validations"
+                ],
+                "additionalProperties": false
+            }
+        }
+    },
+    "required": [
+        "groups"
+    ],
+    "additionalProperties": false
+}

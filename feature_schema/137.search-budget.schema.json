@@ -1,0 +1,188 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "validations": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string"
+                    },
+                    "message": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "message",
+                    "type"
+                ],
+                "additionalProperties": false
+            }
+        },
+        "lines": {
+            "type": "object",
+            "properties": {
+                "defaultBudget": {
+                    "type": "integer"
+                },
+                "minBudget": {
+                    "type": "integer"
+                },
+                "defaultMaxLines": {
+                    "type": "integer"
+                },
+                "defaultLine": {
+                    "type": "integer"
+                },
+                "perLineCost": {
+                    "type": "integer"
+                },
+                "linesList": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "option": {
+                                "type": "integer"
+                            },
+                            "value": {
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "option",
+                            "value"
+                        ],
+                        "additionalProperties": false
+                    }
+                }
+            },
+            "required": [
+                "defaultBudget",
+                "defaultLine",
+                "defaultMaxLines",
+                "linesList",
+                "minBudget",
+                "perLineCost"
+            ],
+            "additionalProperties": false
+        },
+        "setUpFee": {
+            "type": "object",
+            "properties": {
+                "defaultBudget": {
+                    "type": "integer"
+                },
+                "additional": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "additional",
+                "defaultBudget"
+            ],
+            "additionalProperties": false
+        },
+        "options": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "budget": {
+                        "type": "object",
+                        "properties": {
+                            "default": {
+                                "type": "integer"
+                            },
+                            "min": {
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "default",
+                            "min"
+                        ],
+                        "additionalProperties": false
+                    },
+                    "monthlyBudget": {
+                        "type": "object",
+                        "properties": {
+                            "min": {
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "min"
+                        ],
+                        "additionalProperties": false
+                    },
+                    "cpm": {
+                        "type": "object",
+                        "properties": {
+                            "default": {
+                                "type": "integer"
+                            },
+                            "min": {
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "default",
+                            "min"
+                        ],
+                        "additionalProperties": false
+                    },
+                    "campaign": {
+                        "type": "object",
+                        "properties": {
+                            "days": {
+                                "type": "object",
+                                "properties": {
+                                    "default": {
+                                        "type": "integer"
+                                    },
+                                    "min": {
+                                        "type": "integer"
+                                    },
+                                    "max": {
+                                        "type": "integer"
+                                    }
+                                },
+                                "required": [
+                                    "default",
+                                    "max",
+                                    "min"
+                                ],
+                                "additionalProperties": false
+                            }
+                        },
+                        "required": [
+                            "days"
+                        ],
+                        "additionalProperties": false
+                    }
+                },
+                "required": [
+                    "budget",
+                    "campaign",
+                    "cpm",
+                    "monthlyBudget"
+                ],
+                "additionalProperties": false
+            }
+        }
+    },
+    "required": [
+        "id",
+        "lines",
+        "options",
+        "setUpFee",
+        "validations"
+    ],
+    "additionalProperties": false
+}

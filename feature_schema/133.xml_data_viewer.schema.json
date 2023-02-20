@@ -1,0 +1,16 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "isTotalBudgetDisabled": {
+            "type": "boolean"
+        },
+        "termBased": {
+            "type": "boolean"
+        }
+    },
+    "required": [
+        "isTotalBudgetDisabled"
+    ],
+    "additionalProperties": false
+}

@@ -1,0 +1,42 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "colors": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "productFilter": {
+            "type": "object",
+            "properties": {
+                "hide": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "hide"
+            ],
+            "additionalProperties": false
+        },
+        "chart": {
+            "type": "object",
+            "properties": {
+                "hide": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "hide"
+            ],
+            "additionalProperties": false
+        }
+    },
+    "required": [
+        "chart",
+        "colors",
+        "productFilter"
+    ],
+    "additionalProperties": false
+}

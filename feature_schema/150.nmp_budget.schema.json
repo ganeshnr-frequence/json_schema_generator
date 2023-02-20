@@ -1,0 +1,30 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "hideDetails": {
+            "type": "boolean"
+        },
+        "isTotalBudgetDisabled": {
+            "type": "boolean"
+        },
+        "termBased": {
+            "type": "boolean"
+        },
+        "budgetDisabled": {
+            "type": "boolean"
+        },
+        "feeDisabled": {
+            "type": "boolean"
+        },
+        "showManagementFee": {
+            "type": "boolean"
+        }
+    },
+    "required": [
+        "hideDetails",
+        "isTotalBudgetDisabled",
+        "termBased"
+    ],
+    "additionalProperties": false
+}

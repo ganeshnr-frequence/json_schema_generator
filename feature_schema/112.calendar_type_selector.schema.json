@@ -1,0 +1,53 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "label": {
+            "type": "string"
+        },
+        "options": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "key": {
+                        "type": "string"
+                    },
+                    "label": {
+                        "type": "string"
+                    },
+                    "params": {
+                        "type": "object",
+                        "properties": {
+                            "hook": {
+                                "type": "string"
+                            },
+                            "type": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "hook",
+                            "type"
+                        ],
+                        "additionalProperties": false
+                    }
+                },
+                "required": [
+                    "key",
+                    "label",
+                    "params"
+                ],
+                "additionalProperties": false
+            }
+        },
+        "selectedOption": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "label",
+        "selectedOption"
+    ],
+    "additionalProperties": false
+}

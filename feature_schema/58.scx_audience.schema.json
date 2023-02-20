@@ -1,0 +1,40 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "leftNavLabel": {
+            "type": "string"
+        },
+        "displayOrder": {
+            "type": "integer"
+        },
+        "name": {
+            "type": "string"
+        },
+        "featureTitle": {
+            "type": "string"
+        },
+        "hasGroupedProductLabel": {
+            "type": "boolean"
+        },
+        "featureInfo": {
+            "type": "string"
+        },
+        "productsCardInfo": {
+            "type": "string"
+        },
+        "label": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "displayOrder",
+        "hasGroupedProductLabel",
+        "id",
+        "name"
+    ],
+    "additionalProperties": false
+}

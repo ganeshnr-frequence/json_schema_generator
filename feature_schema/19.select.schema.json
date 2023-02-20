@@ -1,0 +1,67 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "label": {
+            "type": "string"
+        },
+        "options": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "label": {
+                        "type": "string"
+                    },
+                    "value": {
+                        "type": [
+                            "integer",
+                            "string"
+                        ]
+                    }
+                },
+                "required": [
+                    "label",
+                    "value"
+                ],
+                "additionalProperties": false
+            }
+        },
+        "value": {
+            "type": "string"
+        },
+        "errorMessages": {
+            "type": "object",
+            "properties": {
+                "required": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "required"
+            ],
+            "additionalProperties": false
+        },
+        "validators": {
+            "type": "object",
+            "properties": {
+                "required": {
+                    "type": "null"
+                }
+            },
+            "required": [
+                "required"
+            ],
+            "additionalProperties": false
+        }
+    },
+    "required": [
+        "id",
+        "label",
+        "options"
+    ],
+    "additionalProperties": false
+}

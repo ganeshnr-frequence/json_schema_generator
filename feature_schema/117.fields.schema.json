@@ -1,0 +1,414 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "isSpecial": {
+            "type": "boolean"
+        },
+        "formFields": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "isSpecial": {
+                        "type": "boolean"
+                    },
+                    "label": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string"
+                    },
+                    "placeholder": {
+                        "type": "string"
+                    },
+                    "formLayout": {
+                        "type": "object",
+                        "properties": {
+                            "orderName": {
+                                "type": "object",
+                                "properties": {
+                                    "element": {
+                                        "type": "object",
+                                        "properties": {
+                                            "label": {
+                                                "type": "string"
+                                            },
+                                            "container": {
+                                                "type": "string"
+                                            },
+                                            "control": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "required": [
+                                            "container",
+                                            "control",
+                                            "label"
+                                        ],
+                                        "additionalProperties": false
+                                    }
+                                },
+                                "required": [
+                                    "element"
+                                ],
+                                "additionalProperties": false
+                            },
+                            "targeting": {
+                                "type": "object",
+                                "properties": {
+                                    "element": {
+                                        "type": "object",
+                                        "properties": {
+                                            "label": {
+                                                "type": "string"
+                                            },
+                                            "container": {
+                                                "type": "string"
+                                            },
+                                            "control": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "required": [
+                                            "container",
+                                            "control",
+                                            "label"
+                                        ],
+                                        "additionalProperties": false
+                                    }
+                                },
+                                "required": [
+                                    "element"
+                                ],
+                                "additionalProperties": false
+                            },
+                            "facebookurl": {
+                                "type": "object",
+                                "properties": {
+                                    "element": {
+                                        "type": "object",
+                                        "properties": {
+                                            "label": {
+                                                "type": "string"
+                                            },
+                                            "container": {
+                                                "type": "string"
+                                            },
+                                            "control": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "required": [
+                                            "container",
+                                            "control",
+                                            "label"
+                                        ],
+                                        "additionalProperties": false
+                                    }
+                                },
+                                "required": [
+                                    "element"
+                                ],
+                                "additionalProperties": false
+                            },
+                            "placement_instagram": {
+                                "type": "object",
+                                "properties": {
+                                    "element": {
+                                        "type": "object",
+                                        "properties": {
+                                            "label": {
+                                                "type": "string"
+                                            },
+                                            "container": {
+                                                "type": "string"
+                                            },
+                                            "control": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "required": [
+                                            "container",
+                                            "control",
+                                            "label"
+                                        ],
+                                        "additionalProperties": false
+                                    }
+                                },
+                                "required": [
+                                    "element"
+                                ],
+                                "additionalProperties": false
+                            },
+                            "placement_messenger": {
+                                "type": "object",
+                                "properties": {
+                                    "element": {
+                                        "type": "object",
+                                        "properties": {
+                                            "label": {
+                                                "type": "string"
+                                            },
+                                            "container": {
+                                                "type": "string"
+                                            },
+                                            "control": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "required": [
+                                            "container",
+                                            "control",
+                                            "label"
+                                        ],
+                                        "additionalProperties": false
+                                    }
+                                },
+                                "required": [
+                                    "element"
+                                ],
+                                "additionalProperties": false
+                            }
+                        },
+                        "additionalProperties": false
+                    },
+                    "validations": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "type": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "message",
+                                "type"
+                            ],
+                            "additionalProperties": false
+                        }
+                    },
+                    "rows": {
+                        "type": "integer"
+                    },
+                    "enabled": {
+                        "type": "boolean"
+                    },
+                    "isHidden": {
+                        "type": "boolean"
+                    },
+                    "isReadOnly": {
+                        "type": "boolean"
+                    },
+                    "additional": {
+                        "type": "object",
+                        "properties": {
+                            "floatLabel": {
+                                "type": "string"
+                            },
+                            "cdkTextareaAutosize": {
+                                "type": "boolean"
+                            },
+                            "subType": {
+                                "type": "string"
+                            },
+                            "uniqueField": {
+                                "type": "string"
+                            },
+                            "selectionModelRenderer": {
+                                "type": "string"
+                            },
+                            "placeholder": {
+                                "type": "string"
+                            },
+                            "usePartnerStyle": {
+                                "type": "boolean"
+                            },
+                            "defaultDataApi": {
+                                "type": "object",
+                                "properties": {
+                                    "endPoint": {
+                                        "type": "string"
+                                    },
+                                    "requestObject": {
+                                        "type": "object",
+                                        "properties": {
+                                            "productUid": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "required": [
+                                            "productUid"
+                                        ],
+                                        "additionalProperties": false
+                                    }
+                                },
+                                "required": [
+                                    "endPoint",
+                                    "requestObject"
+                                ],
+                                "additionalProperties": false
+                            },
+                            "api": {
+                                "type": "object",
+                                "properties": {
+                                    "endPoint": {
+                                        "type": "string"
+                                    },
+                                    "requestObject": {
+                                        "type": "object",
+                                        "properties": {
+                                            "term": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "dependentOn": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "attributeKey": {
+                                                                "type": "string"
+                                                            },
+                                                            "fieldFromAttributeValue": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "attributeKey",
+                                                            "fieldFromAttributeValue"
+                                                        ],
+                                                        "additionalProperties": false
+                                                    }
+                                                },
+                                                "required": [
+                                                    "dependentOn"
+                                                ],
+                                                "additionalProperties": false
+                                            },
+                                            "productUid": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "required": [
+                                            "productUid",
+                                            "term"
+                                        ],
+                                        "additionalProperties": false
+                                    }
+                                },
+                                "required": [
+                                    "endPoint",
+                                    "requestObject"
+                                ],
+                                "additionalProperties": false
+                            },
+                            "rows": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "columns": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "type": {
+                                                        "type": "string"
+                                                    },
+                                                    "renderer": {
+                                                        "type": "string"
+                                                    },
+                                                    "styleClass": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "renderer",
+                                                    "styleClass",
+                                                    "type"
+                                                ],
+                                                "additionalProperties": false
+                                            }
+                                        }
+                                    },
+                                    "required": [
+                                        "columns"
+                                    ],
+                                    "additionalProperties": false
+                                }
+                            }
+                        },
+                        "additionalProperties": false
+                    },
+                    "options": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "label": {
+                                    "type": "string"
+                                },
+                                "value": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "label",
+                                "value"
+                            ],
+                            "additionalProperties": false
+                        }
+                    },
+                    "hint": {
+                        "type": "object",
+                        "properties": {
+                            "Traffic - Consideration": {
+                                "type": "string"
+                            },
+                            "Reach - Awareness": {
+                                "type": "string"
+                            },
+                            "Video Views - Consideration": {
+                                "type": "string"
+                            },
+                            "traffic-consideration": {
+                                "type": "string"
+                            },
+                            "reach-awareness": {
+                                "type": "string"
+                            },
+                            "video-views-consideration": {
+                                "type": "string"
+                            }
+                        },
+                        "additionalProperties": false
+                    },
+                    "multiple": {
+                        "type": "boolean"
+                    },
+                    "list": {
+                        "type": "array"
+                    }
+                },
+                "required": [
+                    "id",
+                    "label",
+                    "type"
+                ],
+                "additionalProperties": false
+            }
+        },
+        "disableAutoGenerateName": {
+            "type": "boolean"
+        }
+    },
+    "required": [
+        "formFields"
+    ],
+    "additionalProperties": false
+}

@@ -1,0 +1,63 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "label": {
+            "type": "string"
+        },
+        "options": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "key": {
+                        "type": "string"
+                    },
+                    "label": {
+                        "type": "string"
+                    },
+                    "langaugeId": {
+                        "type": "string"
+                    },
+                    "item_list": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "key": {
+                                    "type": "string"
+                                },
+                                "label": {
+                                    "type": "string"
+                                },
+                                "langaugeId": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "key",
+                                "label",
+                                "langaugeId"
+                            ],
+                            "additionalProperties": false
+                        }
+                    }
+                },
+                "required": [
+                    "key",
+                    "label"
+                ],
+                "additionalProperties": false
+            }
+        },
+        "selectedOption": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "label",
+        "options",
+        "selectedOption"
+    ],
+    "additionalProperties": false
+}

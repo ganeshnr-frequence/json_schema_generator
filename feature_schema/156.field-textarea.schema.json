@@ -1,0 +1,90 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "formFields": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string"
+                    },
+                    "id": {
+                        "type": "string"
+                    },
+                    "label": {
+                        "type": "string"
+                    },
+                    "placeholder": {
+                        "type": "string"
+                    },
+                    "rows": {
+                        "type": "integer"
+                    },
+                    "enabled": {
+                        "type": "boolean"
+                    },
+                    "isHidden": {
+                        "type": "boolean"
+                    },
+                    "isReadOnly": {
+                        "type": "boolean"
+                    },
+                    "additional": {
+                        "type": "object",
+                        "properties": {
+                            "floatLabel": {
+                                "type": "string"
+                            },
+                            "cdkTextareaAutosize": {
+                                "type": "boolean"
+                            }
+                        },
+                        "required": [
+                            "cdkTextareaAutosize",
+                            "floatLabel"
+                        ],
+                        "additionalProperties": false
+                    },
+                    "validations": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "type": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "message",
+                                "type"
+                            ],
+                            "additionalProperties": false
+                        }
+                    }
+                },
+                "required": [
+                    "additional",
+                    "enabled",
+                    "id",
+                    "isHidden",
+                    "isReadOnly",
+                    "label",
+                    "placeholder",
+                    "rows",
+                    "type",
+                    "validations"
+                ],
+                "additionalProperties": false
+            }
+        }
+    },
+    "required": [
+        "formFields"
+    ],
+    "additionalProperties": false
+}

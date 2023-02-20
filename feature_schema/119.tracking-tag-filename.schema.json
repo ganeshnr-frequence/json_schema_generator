@@ -1,0 +1,62 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "fileNameLabel": {
+            "type": "string"
+        },
+        "newTrackingTagLabel": {
+            "type": "string"
+        },
+        "NoAdvertiserInfoMessage": {
+            "type": "string"
+        },
+        "trackingTagAddtionalNote": {
+            "type": "string"
+        },
+        "createTrackingTagPlaceholder": {
+            "type": "string"
+        },
+        "selectTrackingTagPlaceholder": {
+            "type": "string"
+        },
+        "editSiteTagLabel": {
+            "type": "string"
+        },
+        "editSiteTagUrlEndpoint": {
+            "type": "string"
+        },
+        "validations": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string"
+                    },
+                    "message": {
+                        "type": "string"
+                    },
+                    "toastMessage": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "message",
+                    "toastMessage",
+                    "type"
+                ],
+                "additionalProperties": false
+            }
+        }
+    },
+    "required": [
+        "NoAdvertiserInfoMessage",
+        "createTrackingTagPlaceholder",
+        "fileNameLabel",
+        "newTrackingTagLabel",
+        "selectTrackingTagPlaceholder",
+        "trackingTagAddtionalNote"
+    ],
+    "additionalProperties": false
+}

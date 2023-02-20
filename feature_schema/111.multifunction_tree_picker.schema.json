@@ -1,0 +1,138 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "multiModeConfig": {
+            "type": "object",
+            "properties": {
+                "label": {
+                    "type": "string"
+                },
+                "showFeatureLabel": {
+                    "type": "boolean"
+                },
+                "crumbTitle": {
+                    "type": "string"
+                },
+                "showCrumbTitle": {
+                    "type": "boolean"
+                },
+                "infoMessage1": {
+                    "type": "string"
+                },
+                "selectedItemKey": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "crumbTitle",
+                "infoMessage1",
+                "label",
+                "selectedItemKey",
+                "showCrumbTitle",
+                "showFeatureLabel"
+            ],
+            "additionalProperties": false
+        },
+        "pickerConfig": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "label": {
+                    "type": "string"
+                },
+                "appendUniqueDisplayIdToApi": {
+                    "type": "boolean"
+                },
+                "showFeatureLabel": {
+                    "type": "boolean"
+                },
+                "enableParentSelection": {
+                    "type": "boolean"
+                },
+                "hasQueryKey": {
+                    "type": "boolean"
+                },
+                "dynamicallyLoadChildren": {
+                    "type": "boolean"
+                },
+                "showChildrenCount": {
+                    "type": "boolean"
+                },
+                "hideCrumbs": {
+                    "type": "boolean"
+                },
+                "widgetName": {
+                    "type": "string"
+                },
+                "showToggleView": {
+                    "type": "boolean"
+                },
+                "showInfoIcon": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "appendUniqueDisplayIdToApi",
+                "dynamicallyLoadChildren",
+                "enableParentSelection",
+                "hasQueryKey",
+                "hideCrumbs",
+                "id",
+                "label",
+                "showChildrenCount",
+                "showFeatureLabel",
+                "showToggleView",
+                "widgetName"
+            ],
+            "additionalProperties": false
+        },
+        "dependentOn": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "additionalProperties": false
+        },
+        "validations": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string"
+                    },
+                    "dependentOn": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "minLength": {
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                    "dependentOn",
+                    "minLength",
+                    "type"
+                ],
+                "additionalProperties": false
+            }
+        }
+    },
+    "required": [
+        "dependentOn",
+        "multiModeConfig",
+        "pickerConfig",
+        "validations"
+    ],
+    "additionalProperties": false
+}

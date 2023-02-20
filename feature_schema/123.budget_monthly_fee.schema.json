@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "isRecurring": {
+            "type": "boolean"
+        },
+        "canEditLabel": {
+            "type": "boolean"
+        },
+        "productIndependent": {
+            "type": "boolean"
+        },
+        "displayName": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "isRecurring"
+    ],
+    "additionalProperties": false
+}
