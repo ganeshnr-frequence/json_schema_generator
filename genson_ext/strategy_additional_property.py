@@ -1,4 +1,3 @@
-from genson import SchemaBuilder
 from genson.schema.strategies import Object
 
 class PreventAdditionalProperties(Object):
@@ -17,8 +16,6 @@ class PreventAdditionalProperties(Object):
         return schema
 
 
-class CustomSchemaBuilder(SchemaBuilder):
-    """ all object nodes include additionalProperties """
-    EXTRA_STRATEGIES = (PreventAdditionalProperties,)
+
     
     

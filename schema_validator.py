@@ -1,57 +1,15 @@
 import os
-import mysql.connector
 import json
+from util import is_json
 from jsonschema import Draft7Validator
-from secrets_1 import secrets
+from db_executor import get_widget_config, get_strategy_widget_config
 
 entries = os.listdir('widget_schema/')
 
     
 #variables
-widget_config = []
-
-
-#get all the config json for the widget from widgets and strategies_join_widget_config table
-#create a connection
-cnx = mysql.connector.connect(user=secrets.get('DATABASE_USER'), password=secrets.get('DATABASE_PASSWORD'),
-                              host=secrets.get('DATABASE_HOST'),
-                              database=secrets.get('DATABASE_NAME'))
-
-#open cursor
-cursor = cnx.cursor()
-
-#execute query
-query = ("select id, name, config_json from widgets")
-cursor.execute(query)
-
-for (id, name, config_json) in cursor:
-    widget_config.append({ 'id': id, 'config_json': ('{}' if config_json is None else config_json) })
-
-#close the cursor
-cursor.close()
-
-#open cursor
-cursor = cnx.cursor()
-
-#execute query
-query = ("select widget_id, config_json from strategies_join_widget_config")
-cursor.execute(query)
-
-for (id, config_json) in cursor:
-    widget_config.append({ 'id': id, 'config_json': ('{}' if config_json is None else config_json) })
-
-#close the cursor
-cursor.close()
-
-#close the connection
-cnx.close()
-
-def is_json(myjson):
-  try:
-    json.loads(myjson)
-  except ValueError as e:
-    return False
-  return True
+widget_config = get_widget_config() 
+strategy_widget_config = get_strategy_widget_config()
 
 
 for e in entries:
