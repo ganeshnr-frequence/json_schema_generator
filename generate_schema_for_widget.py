@@ -76,11 +76,8 @@ def is_json(myjson):
 
 
 for w in widget:
-    builder = CustomSchemaBuilder(schema_uri='http://json-schema.org/draft-07/schema#')
-    
-    # adding the schema's draft version
-    builder.add_object({"$schema": "http://json-schema.org/draft-07/schema#"})
-    
+    builder = CustomSchemaBuilder(schema_uri='http://json-schema.org/draft-07/schema#') # add json schema version
+       
     if is_json(w['config_json']) and w['config_json'] != '{}' and w['config_json'] != '' and w['config_json'] != '[]':
         builder.add_object(json.loads(w['config_json']))
         
