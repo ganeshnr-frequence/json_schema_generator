@@ -37,10 +37,5 @@
             }
         }
     },
-    "required": [
-        "dependentOn",
-        "label",
-        "validations"
-    ],
     "additionalProperties": false
 }

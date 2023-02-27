@@ -9,9 +9,5 @@
             "type": "string"
         }
     },
-    "required": [
-        "id",
-        "type"
-    ],
     "additionalProperties": false
 }

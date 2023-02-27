@@ -14,5 +14,5 @@ def get_custom_builder():
   return CustomSchemaBuilder(schema_uri='http://json-schema.org/draft-07/schema#')
 
 
-def is_json_empty(json_string):
-  return is_json(json_string) and json_string != '{}' and json_string != '' and json_string != '[]'
+def is_json_not_empty(json_string):
+  return is_json(json_string) and json_string != ''

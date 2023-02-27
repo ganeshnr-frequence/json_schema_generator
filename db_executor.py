@@ -91,8 +91,8 @@ def get_strategy_feature_config():
 
     #execute query
     query = (   
-                "select wc.widget_feature_id, wf.feature_name, wc.config_json from strategies_widget_config_join_features wc "
-                "inner join widget_features wf "
+                "select wc.widget_feature_id, wf.feature_name, wc.config_json from strategies_widget_config_join_features wc " + 
+                "inner join widget_features wf " +
                 "on wc.widget_feature_id = wf.id"
             )
     cursor.execute(query)

@@ -172,8 +172,5 @@
             }
         }
     },
-    "required": [
-        "formFields"
-    ],
     "additionalProperties": false
 }

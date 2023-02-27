@@ -68,12 +68,5 @@
             "type": "boolean"
         }
     },
-    "required": [
-        "duration",
-        "headers",
-        "isTotalBudgetDisabled",
-        "multiplierRange",
-        "validations"
-    ],
     "additionalProperties": false
 }

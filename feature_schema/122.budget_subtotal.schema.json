@@ -6,8 +6,5 @@
             "type": "boolean"
         }
     },
-    "required": [
-        "isRecurring"
-    ],
     "additionalProperties": false
 }

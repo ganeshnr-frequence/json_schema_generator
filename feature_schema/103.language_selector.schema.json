@@ -54,10 +54,5 @@
             "type": "string"
         }
     },
-    "required": [
-        "label",
-        "options",
-        "selectedOption"
-    ],
     "additionalProperties": false
 }

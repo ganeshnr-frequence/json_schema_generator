@@ -49,11 +49,5 @@
             }
         }
     },
-    "required": [
-        "id",
-        "industries",
-        "rateCardLabel",
-        "validations"
-    ],
     "additionalProperties": false
 }

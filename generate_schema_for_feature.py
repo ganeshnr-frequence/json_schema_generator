@@ -1,5 +1,5 @@
 import json
-from util import get_custom_builder, is_json_empty
+from util import get_custom_builder, is_json_not_empty
 from db_executor import get_feature_config, get_strategy_feature_config
     
 #variables
@@ -12,14 +12,14 @@ for w in feature_config:
     builder = get_custom_builder()
     schema_count += 1
     
-    if is_json_empty(w['config_json']):
+    if is_json_not_empty(w['config_json']):
         builder.add_object(json.loads(w['config_json']))
     
     # filter the config specific to the feature
     filtered_result = filter(lambda i: i['id'] == w['id'], strategy_feature_config)
     
     for fr in filtered_result:
-        if is_json_empty(fr['config_json']):
+        if is_json_not_empty(fr['config_json']):
                 builder.add_object(json.loads(fr['config_json']))
     
     

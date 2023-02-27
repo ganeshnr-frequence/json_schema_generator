@@ -59,9 +59,5 @@
             "type": "boolean"
         }
     },
-    "required": [
-        "validations",
-        "warningMessages"
-    ],
     "additionalProperties": false
 }

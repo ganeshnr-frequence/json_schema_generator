@@ -37,10 +37,5 @@
             "type": "string"
         }
     },
-    "required": [
-        "displayOrder",
-        "id",
-        "name"
-    ],
     "additionalProperties": false
 }

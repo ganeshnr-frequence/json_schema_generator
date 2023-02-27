@@ -180,12 +180,5 @@
             "type": "string"
         }
     },
-    "required": [
-        "id",
-        "lines",
-        "options",
-        "setUpFee",
-        "validations"
-    ],
     "additionalProperties": false
 }

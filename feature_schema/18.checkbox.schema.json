@@ -82,9 +82,5 @@
             "type": "string"
         }
     },
-    "required": [
-        "id",
-        "label"
-    ],
     "additionalProperties": false
 }

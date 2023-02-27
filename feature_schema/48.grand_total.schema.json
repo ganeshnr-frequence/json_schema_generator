@@ -43,8 +43,5 @@
             "type": "boolean"
         }
     },
-    "required": [
-        "id"
-    ],
     "additionalProperties": false
 }

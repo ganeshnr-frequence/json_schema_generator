@@ -25,8 +25,5 @@
             "type": "string"
         }
     },
-    "required": [
-        "validations"
-    ],
     "additionalProperties": false
 }

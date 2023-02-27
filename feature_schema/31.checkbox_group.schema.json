@@ -66,9 +66,5 @@
             "type": "string"
         }
     },
-    "required": [
-        "group",
-        "id"
-    ],
     "additionalProperties": false
 }

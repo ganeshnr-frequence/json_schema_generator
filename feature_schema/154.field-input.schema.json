@@ -242,8 +242,5 @@
             }
         }
     },
-    "required": [
-        "formFields"
-    ],
     "additionalProperties": false
 }

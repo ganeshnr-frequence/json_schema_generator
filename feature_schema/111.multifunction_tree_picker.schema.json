@@ -128,11 +128,5 @@
             }
         }
     },
-    "required": [
-        "dependentOn",
-        "multiModeConfig",
-        "pickerConfig",
-        "validations"
-    ],
     "additionalProperties": false
 }

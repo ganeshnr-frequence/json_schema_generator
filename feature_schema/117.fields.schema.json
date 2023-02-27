@@ -407,8 +407,5 @@
             "type": "boolean"
         }
     },
-    "required": [
-        "formFields"
-    ],
     "additionalProperties": false
 }

@@ -112,9 +112,5 @@
             }
         }
     },
-    "required": [
-        "options",
-        "validations"
-    ],
     "additionalProperties": false
 }

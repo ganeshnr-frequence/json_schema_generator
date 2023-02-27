@@ -12,8 +12,5 @@
             "type": "boolean"
         }
     },
-    "required": [
-        "valueType"
-    ],
     "additionalProperties": false
 }

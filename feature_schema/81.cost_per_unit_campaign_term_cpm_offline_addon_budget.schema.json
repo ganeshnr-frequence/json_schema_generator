@@ -18,9 +18,5 @@
             "additionalProperties": false
         }
     },
-    "required": [
-        "dependentOn",
-        "label"
-    ],
     "additionalProperties": false
 }

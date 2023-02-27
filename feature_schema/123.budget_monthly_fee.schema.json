@@ -15,8 +15,5 @@
             "type": "string"
         }
     },
-    "required": [
-        "isRecurring"
-    ],
     "additionalProperties": false
 }

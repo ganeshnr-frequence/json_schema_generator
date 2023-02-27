@@ -41,9 +41,5 @@
             }
         }
     },
-    "required": [
-        "goals",
-        "validations"
-    ],
     "additionalProperties": false
 }

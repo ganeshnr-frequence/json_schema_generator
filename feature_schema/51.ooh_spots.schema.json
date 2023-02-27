@@ -104,13 +104,5 @@
             "type": "boolean"
         }
     },
-    "required": [
-        "conversion",
-        "isDuplicate",
-        "minGeofenceLength",
-        "radius",
-        "radiusType",
-        "required"
-    ],
     "additionalProperties": false
 }

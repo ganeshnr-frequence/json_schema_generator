@@ -50,13 +50,5 @@
             }
         }
     },
-    "required": [
-        "NoAdvertiserInfoMessage",
-        "createTrackingTagPlaceholder",
-        "fileNameLabel",
-        "newTrackingTagLabel",
-        "selectTrackingTagPlaceholder",
-        "trackingTagAddtionalNote"
-    ],
     "additionalProperties": false
 }

@@ -167,16 +167,5 @@
             "additionalProperties": false
         }
     },
-    "required": [
-        "bulkGeofenceConfig",
-        "conversion",
-        "mapboxDraw",
-        "mapboxDrawEnabled",
-        "minGeofencesLength",
-        "minGeofencesLengthWithOfflineVisit",
-        "minGeofencesLengthWithOutOfflineVisit",
-        "radius",
-        "radiusType"
-    ],
     "additionalProperties": false
 }

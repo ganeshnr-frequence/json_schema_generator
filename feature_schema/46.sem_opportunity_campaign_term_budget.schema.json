@@ -60,9 +60,5 @@
             "type": "string"
         }
     },
-    "required": [
-        "defaultValue",
-        "id"
-    ],
     "additionalProperties": false
 }

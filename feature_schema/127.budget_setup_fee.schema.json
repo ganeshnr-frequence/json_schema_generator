@@ -9,8 +9,5 @@
             "type": "boolean"
         }
     },
-    "required": [
-        "canEditLabel"
-    ],
     "additionalProperties": false
 }

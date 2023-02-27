@@ -74,11 +74,5 @@
             }
         }
     },
-    "required": [
-        "defaultPackageId",
-        "duration",
-        "isTotalBudgetDisabled",
-        "packageSelectorList"
-    ],
     "additionalProperties": false
 }
