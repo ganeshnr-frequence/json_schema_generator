@@ -18,7 +18,7 @@ with open("./update_script_widget_schema.sql", "w") as outfile:
         f = open('./' + folder_name + '/' + e)
         schema = json.load(f)
         
-        query = 'UPDATE widgets SET schema_json = "{}" WHERE id = {}; \n'.format(schema, id)
+        query = "UPDATE widgets SET schema_json = '{}' WHERE id = {}; \n\n".format(json.dumps(schema), id)
         
         outfile.write(query)
     
@@ -42,7 +42,7 @@ with open("./update_script_feature_schema.sql", "w") as outfile:
         f = open('./' + folder_name + '/' + e)
         schema = json.load(f)
         
-        query = 'UPDATE widget_features SET schema_json = "{}" WHERE id = {}; \n\n'.format(schema, id)
+        query = "UPDATE widget_features SET schema_json = '{}' WHERE id = {}; \n\n".format(json.dumps(schema), id)
         
         outfile.write(query)
     
